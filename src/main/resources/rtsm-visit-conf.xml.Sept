@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans             http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+  <bean id="siteConfigurations" class="qa.qcri.rtsm.item.SiteConfigurations"> 
+    <property name="sites">
+      <list value-type="qa.qcri.rtsm.item.SiteConfiguration"> 
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="www.aljazeera.com"/>
+		  <property name="URLPattern" value=".html"/>
+		  <property name="comment" value="Al Jazeera English (tracker installed, Facebook token by Kiran [exp Apr'14], Twitter token by ChaTo)"/>
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAD8Mm1qO9HggmWaLHQTiQl0S4KZCJH29Qr8TZAGqNuZALLpBEv2kszV3a5yNud7lqVEZBV6DuwIZCzh0ZC6l6ZAuzZBD1OksHhZCciCAZA0ZCD2tL9eQlJKpma8v4BP5pmMn6Vra9uvboLzXBP7YU7STdLcklM23XLXNIfYxdgmNmk4"/>
+		  <property name="twitterAuthToken" value="5734242-T7YwJSZ3PzaMUhf4XeDBboduYzOFikHDJ9zXVXR0g"/>
+		  <property name="twitterAuthTokenSecret" value="VZr1beowvLkZ7amhVzkEXx1z68oks4hm8JCUGeRDw"/>
+		</bean>
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="balkans.aljazeera.net"/>
+		  <property name="URLPattern" value=""/>
+		  <property name="comment" value="Al Jazeera Balkans (tracker installed, Facebook token by Chato [exp Feb'14], Twitter token by Kiran)"/>
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAC7j3lVidPQLuH72TSUUO36VEN6mFHvNIcJCAGf7oLocZBxza7DNwHZAlMR3HTMOYfJIvQkbI8gdZBQZCTfgeaI1ZAoFkvxvcLBsOVQ6tbWL7u4PL731AjlhN61iSHbcxc8ZAVZAzEyux3VcuCGjgSzwC7YB3hdFGrUsgZBow5D49P0iwiLdZAg4ZD"/>
+		  <property name="twitterAuthToken" value="16925097-wfgO7FtlqgJkXbOpAhAP5fLPe5uyVTsaGTnIE0WTB"/>
+		  <property name="twitterAuthTokenSecret" value="pVlU2ob5PqCIKs96KXFPvAglGUfs5TfhOvoXxGS7y8"/>
+		</bean>
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="www.aljazeera.net"/>
+		  <property name="URLPattern" value=""/>
+		  <property name="comment" value="Al Jazeera Arabic (tracker installed, Facebook token by Imran [exp Feb'14], Twitter token by Sofiane)"/>
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAEt6zXtn5iV0FVUAnHe13OMTDZB9Fxof56vyS1Bs4mZAny3CLeRjQU7DpKAGfCQOb9ZBaJWqL9hWk0A8anMnWJyrrtYzVRlv0L059ZB5N2d1gH6UEv3GZBZBQcHBX9h0eAMChCKvoZBIBZAtpl75Br0WwqWVLCZBAIyOSuHcrSgvWTf9Xc7HZBNzcZD"/>
+		  <property name="twitterAuthToken" value="347945516-deLHCy4FQMdmoYlQTzqMDkGKLfMhp06TxN27WhLW"/>
+		  <property name="twitterAuthTokenSecret" value="Orw9FvVXMtweDT2Dcfh3nwfLPJR5sIdFUh5BXEZ0"/>
+		</bean>
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="www.irinnews.org"/>
+		  <property name="URLPattern" value=""/>
+		  <property name="comment" value="IRIN News (tracker installed, Facebook token by Sofiane [exp Oct'13], Twitter token by Sofiane)"/>
+		  <!--using chatos token temporarily. remove after sofiane sends his token.-->
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAEt6zXtn5iV0FVUAnHe13OMTDZB9Fxof56vyS1Bs4mZAny3CLeRjQU7DpKAGfCQOb9ZBaJWqL9hWk0A8anMnWJyrrtYzVRlv0L059ZB5N2d1gH6UEv3GZBZBQcHBX9h0eAMChCKvoZBIBZAtpl75Br0WwqWVLCZBAIyOSuHcrSgvWTf9Xc7HZBNzcZD"/>
+		  <!-- property name="fbAuthToken" value="CAAF2s8Ty6cABAFAXZCtm05GTuZCZAfBwmyqlBXbhLjHDxs5TucWZCsU6ZCHuPdEvdpvirRTWd3C6eMGi4QDgM3M8GcitsG7qB4nhScVHZCzO1KBZBp1qm09oLomZAcI7WfZCs074N409tu4SKTSrauh6TvOa3TRa8cMwZD"/ -->
+		  <property name="twitterAuthToken" value="347945516-deLHCy4FQMdmoYlQTzqMDkGKLfMhp06TxN27WhLW"/>
+		  <property name="twitterAuthTokenSecret" value="Orw9FvVXMtweDT2Dcfh3nwfLPJR5sIdFUh5BXEZ0"/>
+		</bean>
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="www.bbc.co.uk"/>
+		  <property name="URLPattern" value=""/>
+		  <property name="comment" value="BBC News (tracker not installed, Facebook token by Chato [exp Dec'13], Twitter token by Janette)"/>
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAC7j3lVidPQLuH72TSUUO36VEN6mFHvNIcJCAGf7oLocZBxza7DNwHZAlMR3HTMOYfJIvQkbI8gdZBQZCTfgeaI1ZAoFkvxvcLBsOVQ6tbWL7u4PL731AjlhN61iSHbcxc8ZAVZAzEyux3VcuCGjgSzwC7YB3hdFGrUsgZBow5D49P0iwiLdZAg4ZD"/>
+		  <property name="twitterAuthToken" value="82573938-P7Jxtaa9az1wMQH92Bi9nyGfWBiRrlMveAzAYsmqC"/>
+		  <property name="twitterAuthTokenSecret" value="Yt4ovneNSiONWnFLU8gU898Zvx5QNDd94UmOdNE8k"/>
+		</bean>
+		<bean class="qa.qcri.rtsm.item.SiteConfiguration">
+		  <property name="siteId" value="www.cnn.com"/>
+		  <property name="URLPattern" value=""/>
+		  <property name="comment" value="CNN International Edition (tracker not installed, Facebook token by Kiran [exp Dec'13], Twitter token by Janette)"/>
+		  <property name="fbAuthToken" value="CAAF2s8Ty6cABAIvApxxa2bbDJUI2mHvAEDBsq38mb54FwcZB0jU1ZCZCtDCoXcSre9ERUPKynVDpM6dtYbcDTuW6gmXriHCss2NQOCLRWZA8O84R58nvlzKzgZBsQ0hQsF5B1JMCuljZAXrDeNFLH0SvrPoy3FZBAerpqmvpLnD76ckOyvZBkiHz"/>
+		  <property name="twitterAuthToken" value="82573938-P7Jxtaa9az1wMQH92Bi9nyGfWBiRrlMveAzAYsmqC"/>
+		  <property name="twitterAuthTokenSecret" value="Yt4ovneNSiONWnFLU8gU898Zvx5QNDd94UmOdNE8k"/>
+		</bean>
+      </list>
+    </property>
+  </bean>
+
+  <!-- Processing elements -->
+  <bean id="urlExtractorPE" class="qa.qcri.rtsm.process.URLExtractorPE">
+    <property name="keys">
+      <list>
+        <value>RawVisit *</value>   <!-- Key=* => There is a single PE running -->
+      </list>
+    </property>
+    <property name="dispatcher" ref="visitDispatcher"/>
+    <property name="outputStreamName" value="URLSeenStream"/>
+    <property name="outputStreamNameSource" value="URLSeenSourceStream"/>
+    <property name="sites" ref="siteConfigurations"/>
+  </bean>
+
+  <bean id="urlCountAndReportPE" class="qa.qcri.rtsm.process.URLVisitsCountPE">
+    <property name="keys">
+      <list>
+        <value>URLSeenStream url</value>
+      </list>
+    </property>
+    <property name="threshold" value="5"/>
+    <property name="outputFrequencyByTimeBoundary" value="10"/>
+    <property name="dispatcher" ref="forkdispatcher"/>
+    <property name="outputStreamName" value="URLSeenCounterStream"/>
+    <property name="outputStreamNameOneHour" value="URLSeenCounterOneHourStream"/>
+    <property name="outputStreamNameFiveMinutes" value="URLSeenCounterFiveMinutesStream"/>
+    <property name="ttl" value="36000"/>
+    <property name="logLevel" value="DEBUG"/> <!--log4j level: TRACE, DEBUG or INFO-->
+  </bean>
+  
+  <bean id="timeSeriesVisitPreparePersistPE" class="qa.qcri.rtsm.process.TimeSeriesVisitPreparePersistPE">
+    <property name="keys">
+      <list>
+        <value>URLSeenCounterStream url</value>
+      </list>
+    </property>
+    <property name="outputFrequencyByTimeBoundary" value="60"/>
+    <property name="persister" ref="timeSeriesVisitPersister"/>
+    <property name="persistTime" value="864000"/>
+    <property name="ttl" value="36000"/>
+  </bean>
+  
+  <bean id="timeSeriesSourcePreparePersistPE" class="qa.qcri.rtsm.process.TimeSeriesSourcePreparePersistPE">
+    <property name="keys">
+      <list>
+        <value>URLSeenSourceStream url</value>
+      </list>
+    </property>
+    <property name="outputFrequencyByTimeBoundary" value="60"/>
+    <property name="persister" ref="timeSeriesSourcePersister"/>
+    <property name="persistTime" value="864000"/>
+    <property name="ttl" value="36000"/>
+  </bean>
+  
+  <bean id="contentsDownloaderPE" class="qa.qcri.rtsm.process.ContentsDownloaderPE">
+    <property name="keys">
+      <list>
+        <!-- We run one at most one of these PE per site, for politeness -->
+        <value>URLSeenCounterOneHourStream site</value>
+    </list>
+    </property>
+    <!-- How many seconds to wait between downloads -->
+    <property name="outputFrequencyByTimeBoundary" value="10"/>
+    <!-- How many pages to download after waiting -->
+    <property name="httpRequestsByTimeBoundary" value="2"/>
+    <property name="httpRetriesPerURL" value="5"/>
+    <property name="dispatcher" ref="forkdispatcher"/>
+    <property name="outputStreamName" value="URLSeenParsedStream"/>
+    <property name="ttl" value="36000"/>
+  </bean>
+  
+  <bean id="twitterSearcherPE" class="qa.qcri.rtsm.process.TwitterSearcherPE">
+    <property name="keys">
+      <list>
+        <!-- We run at most one of these PE per site -->
+        <value>URLSeenCounterOneHourStream site</value>
+    </list>
+    </property>
+    <!-- How many seconds to wait between searches in Twitter,
+         limit is 350 reqs/hour for OAuth-enticated calls https://dev.twitter.com/docs/rate-limiting -->
+    <property name="outputFrequencyByTimeBoundary" value="15"/>
+    <property name="dispatcher" ref="forkdispatcher"/>
+    
+    <!-- These two are constant for the entire application -->
+    <property name="twitterConsumerKey" value="cd2CbYFSSkRi20hQmTaaQ"/>
+    <property name="twitterConsumerSecret" value="zdRugnKMqBmiIRVLbZrm2DEouQS3w5YpR0naYyHSYCY"/>
+    
+    <property name="sites" ref="siteConfigurations"/>
+    
+    <!-- Number of distinct urlsToMonitor -->
+    <property name="urlsToMonitor" value="30"/>
+    <property name="outputStreamName" value="URLSeenTweetStream"/>
+    <property name="ttl" value="36000"/>
+    <property name="logLevel" value="DEBUG"/> <!--log4j level: TRACE, DEBUG or INFO-->
+  </bean>
+  
+  <bean id="tweetPreparePersistPE" class="qa.qcri.rtsm.process.TweetPreparePersistPE">
+    <property name="keys">
+      <list>
+        <value>URLSeenTweetStream *</value>
+      </list>
+    </property>
+    <property name="outputFrequencyByTimeBoundary" value="60"/> <!-- Ignored: persist on input -->
+    <property name="persister" ref="tweetPersister"/>
+    <property name="persistTime" value="864000"/>
+    <property name="ttl" value="36000"/>
+  </bean>
+  
+    <bean id="contentPreparePersistPE" class="qa.qcri.rtsm.process.ContentPreparePersistPE">
+   <property name="keys">
+     <list>
+       <value>URLSeenParsedStream *</value>
+     </list>
+   </property>
+   <property name="outputFrequencyByTimeBoundary" value="60"/> <!-- Ignored: persist on input -->
+   <property name="persister" ref="contentPersister"/>
+   <property name="persistTime" value="864000"/>
+   <property name="ttl" value="36000"/>
+  </bean>
+  
+  <bean id="facebookQuerierPE" class="qa.qcri.rtsm.process.FacebookQuerierPE">
+    <property name="keys">
+      <list>
+        <!-- We run a single querier -->
+        <value>URLSeenCounterOneHourStream site</value>
+    </list>
+    </property>
+    <!-- How many seconds to wait between searches in Facebook,
+         limit seems to be 1 query per second -->
+    <property name="outputFrequencyByTimeBoundary" value="5"/>
+    <property name="dispatcher" ref="forkdispatcher"/>
+    <property name="sites" ref="siteConfigurations"/>
+    
+    <!-- Number of distinct urlsToMonitor -->
+    <property name="urlsToMonitor" value="30"/>
+    <property name="outputStreamName" value="URLSeenFacebookStream"/>
+    <property name="ttl" value="36000"/>
+    <property name="logLevel" value="DEBUG"/> <!--log4j level: TRACE, DEBUG or INFO-->
+  </bean>
+  
+  <bean id="timeSeriesFacebookPreparePersistPE" class="qa.qcri.rtsm.process.TimeSeriesFacebookPreparePersistPE">
+  	<property name="keys">
+      <list>
+        <value>URLSeenFacebookStream url</value>
+      </list>
+    </property>
+    <property name="outputFrequencyByTimeBoundary" value="60"/>
+    <property name="persister" ref="timeSeriesFacebookPersister"/>
+    <property name="persistTime" value="864000"/>
+    <property name="ttl" value="36000"/>
+  </bean>
+ 
+  <bean id="topURLsPE" class="qa.qcri.rtsm.process.TopNURLsPE">
+    <property name="keys">
+      <list>
+        <value>URLSeenCounterFiveMinutesStream site</value>
+		<value>URLSeenParsedStream site</value>
+		<value>URLSeenTweetStream site</value>
+		<value>URLSeenFacebookStream site</value>
+      </list>
+    </property>
+    <property name="entryCount" value="30"/>
+    <property name="outputFrequencyByTimeBoundary" value="15"/>
+    <property name="persister" ref="dtfPersister"/>
+    <property name="persistTime" value="864000"/>
+    <property name="ttl" value="36000"/>
+    <property name="logLevel" value="DEBUG"/> <!--log4j level: TRACE, DEBUG or INFO-->
+  </bean>
+  
+  <!-- Persisters -->
+  
+  <bean id="dtfPersister" class="qa.qcri.rtsm.persist.DirectToFilePersister">
+    <property name="baseOutputFilename" value="/var/www/rtsm-report/report/report-"/>
+  </bean>
+ 
+  <bean id="timeSeriesVisitPersister" class="qa.qcri.rtsm.persist.TimeSeriesVisitPersister">
+  	
+  </bean>
+  
+  <bean id="timeSeriesSourcePersister" class="qa.qcri.rtsm.persist.TimeSeriesSourcePersister">
+  	
+  </bean>
+  
+  <bean id="timeSeriesFacebookPersister" class="qa.qcri.rtsm.persist.TimeSeriesFacebookPersister">
+  	
+  </bean>
+  
+  <bean id="tweetPersister" class="qa.qcri.rtsm.persist.TweetPersister">
+
+  </bean>
+  
+  <bean id="contentPersister" class="qa.qcri.rtsm.persist.ContentPersister">
+
+  </bean>
+  
+    
+  <!-- Dispatchers and partitioners -->
+  
+  <bean id="visitDispatcher" class="io.s4.dispatcher.Dispatcher" init-method="init">
+    <property name="partitioners">
+      <list>
+        <ref bean="urlSeenStreamPartitionerByURL"/>
+        <ref bean="urlSeenSourceStreamPartitionerByURL"/>
+        <ref bean="urlSeenCounterStreamPartitionerByDomain"/>
+        <ref bean="urlSeenCounterStreamPartitionerByURL"/>
+        <ref bean="urlSeenCounterOneHourStreamPartitionerByDomain"/>
+        <ref bean="urlSeenCounterFiveMinutesStreamPartitionerByDomain"/>
+        <ref bean="urlSeenParsedStreamPartitionerByDomain"/>
+        <ref bean="urlSeenTweetStreamPartitionerByDomain"/>
+        <ref bean="urlSeenFacebookStreamPartitionerByURL"/>
+        <ref bean="urlSeenFacebookStreamPartitionerByDomain"/>
+      </list>
+    </property>
+    <property name="eventEmitter" ref="commLayerEmitter"/>
+    <property name="loggerName" value="s4"/>
+  </bean>
+  
+  <bean id="forkdispatcher" class="io.s4.dispatcher.MultiDispatcher">
+    <property name="dispatchers">
+      <list>
+
+        <!-- send everything through the S4 dispatcher -->
+        <ref bean="visitDispatcher"/>
+
+        <!-- send some streams to client adapters -->
+        <bean id="selectiveDispatchToAdapter" class="io.s4.dispatcher.StreamSelectingDispatcher">
+          <property name="dispatcher" ref="dispatcherToClientAdapters"/>
+          <property name="streams">
+            <list>
+              <value>URLSeenCounterStream</value>
+              <value>URLSeenCounterOneHourStream</value>
+              <value>URLSeenCounterFiveMinutesStream</value>
+              <value>URLSeenParsedStream</value>
+              <value>URLSeenTweetStream</value>
+              <value>URLSeenFacebookStream</value>
+            </list>
+          </property>
+        </bean>
+
+      </list>
+    </property>
+  </bean>
+  
+  <bean id="urlSeenStreamPartitionerByURL" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>url</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+  <bean id="urlSeenSourceStreamPartitionerByURL" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenSourceStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>url</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+  <bean id="urlSeenCounterStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenCounterStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+  <bean id="urlSeenCounterStreamPartitionerByURL" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenCounterStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>url</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+  <bean id="urlSeenCounterOneHourStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenCounterOneHourStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+    <bean id="urlSeenCounterFiveMinutesStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenCounterFiveMinutesStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>
+  
+  <bean id="urlSeenParsedStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenParsedStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>           
+  
+  <bean id="urlSeenTweetStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenTweetStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>     
+
+  <bean id="urlSeenFacebookStreamPartitionerByURL" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenFacebookStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>url</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>   
+    
+  <bean id="urlSeenFacebookStreamPartitionerByDomain" class="io.s4.dispatcher.partitioner.DefaultPartitioner">
+    <property name="streamNames">
+      <list>
+        <value>URLSeenFacebookStream</value>
+      </list>
+    </property>
+    <property name="hashKey">
+      <list>
+        <value>site</value>
+      </list>
+    </property>
+    <property name="hasher" ref="hasher"/>
+    <property name="debug" value="false"/>
+  </bean>   
+   
+</beans>

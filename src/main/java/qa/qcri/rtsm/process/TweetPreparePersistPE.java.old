@@ -1,0 +1,31 @@
+package qa.qcri.rtsm.process;
+
+import qa.qcri.rtsm.item.URLSeenTweet;
+import qa.qcri.rtsm.persist.TweetPersister;
+import qa.qcri.rtsm.twitter.SimpleTweet;
+import qa.qcri.rtsm.util.Util;
+
+
+public class TweetPreparePersistPE extends PersistedAbstractPE {
+	
+    private TweetPersister tweetPersister;
+    
+	public void processEvent(URLSeenTweet urlSeenTweet) {
+		String url = urlSeenTweet.getUrl();
+		SimpleTweet tweet = urlSeenTweet.getSimpleTweet();
+		Util.logDebug(this, "Got for '" + url + "': " + tweet.toString() );
+		tweetPersister.set(url, tweet);
+    }
+
+    @Override
+    public void output() {
+    	//No-op
+    }
+    
+	@Override
+	public void initInstance() {
+		super.initInstance();
+    	tweetPersister = (TweetPersister)persister;
+	}
+
+}

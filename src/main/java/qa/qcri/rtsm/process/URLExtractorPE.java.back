@@ -1,0 +1,56 @@
+package qa.qcri.rtsm.process;
+
+import qa.qcri.rtsm.item.SiteConfigurations;
+import qa.qcri.rtsm.item.URLSeenSample;
+import qa.qcri.rtsm.item.URLSeenSource;
+import qa.qcri.rtsm.item.Visit;
+import qa.qcri.rtsm.util.Util;
+
+public class URLExtractorPE extends DispatchedOutputedAbstractPE {
+
+	protected String outputStreamNameSource;
+	
+	protected SiteConfigurations sites;
+	
+    public void processEvent(Visit visit) { 
+    	if( sites == null ) {
+    		Util.logError(this, "List of enabled sites not set");
+    		return;
+    	} else if( ! sites.hasSiteId(visit.getSiteID()) ) {
+    		Util.logWarning(this, "Ignoring visit having siteID '" + visit.getSiteID() + "', which is not registered in the configuration");
+    		return;
+    	} else if( ! sites.hasURLPattern(visit.getUrl(),visit.getSiteID())) {
+		Util.logWarning(this, "Ignoring visit not having .html in URL for siteID... '" + visit.getUrl() + "'");
+    		return;
+    	}
+    	
+        URLSeenSample urlSeenSample = new URLSeenSample(visit.getSiteID(), visit.getStrippedNormalizedUrl(), visit.getSampleRate());
+        dispatcher.dispatchEvent(outputStreamName, urlSeenSample); 
+        
+        URLSeenSource urlSeenSource = new URLSeenSource(visit.getSiteID(), visit.getStrippedNormalizedUrl(), visit);
+        dispatcher.dispatchEvent(outputStreamNameSource, urlSeenSource);
+    }
+
+    @Override
+    public void output() {
+        // No-op
+    	// We generate events as soon as they arrive
+    }
+
+	public String getOutputStreamNameSource() {
+		return outputStreamNameSource;
+	}
+
+	public void setOutputStreamNameSource(String outputStreamNameSource) {
+		this.outputStreamNameSource = outputStreamNameSource;
+	}
+
+	public SiteConfigurations getSites() {
+		return sites;
+	}
+
+	public void setSites(SiteConfigurations sites) {
+		this.sites = sites;
+		Util.logInfo(this, "Configured sites: " + sites.listIds());
+	}
+}
