@@ -1,0 +1,59 @@
+<html>
+<head>
+<html>
+<head>
+<title>Installation instructions - Real-time tracker</title>
+<style>
+body { 
+	font-family: "Arial", "Helvetica", sans-serif
+}
+textarea {
+	background: #DDD;
+}
+</style>
+</head>
+<body>
+<h1>Installation instructions</h1>
+
+<p>To install the real-time tracking code:</p>
+
+<ol>
+<li>Copy and paste the following right before the closing '<tt>&lt;/body&gt;</tt>' tag of all the pages you want to track.</li>
+<li>Replace <tt>your-domain-here</tt> by the domain of your website, e.g. <tt>aljazeera.com</tt></li>
+</ol>
+
+<textarea id="code" rows="25" cols="80" onclick="document.getElementById('code').focus(); document.getElementById('code').select()">
+var owa_sampleRate = 1.0;
+var owa_baseUrl = 'http://track.qcri.org/';
+var owa_cmds = owa_cmds || [];
+owa_cmds.push(['setSiteId', 'your-domain-here']);
+owa_cmds.push(['setCustomVar', 1, 'sampleRate', owa_sampleRate, 'page']);
+owa_cmds.push(['trackPageView']);
+ 
+(function() {
+	function load_owa() {
+		var s = document.createElement('script');
+		s.type = 'text/javascript'; s.async = true;
+		s.src = owa_baseUrl + 'v2-track-min.js';
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	}
+	if( owa_sampleRate == 1.0 || Math.random() > (1.0 - owa_sampleRate) ) {
+		if (window.attachEvent) {
+		    window.attachEvent('onload', load_owa);
+		} else {
+		    window.addEventListener('load', load_owa, false);
+		}
+	}
+}());
+</textarea>
+
+<p>Optionally, you can set the <tt>owa_sampleRate</tt> to any value in <tt>]0,1]</tt> to sample a fraction of visits.</p>
+
+<hr/>
+
+<p><em>Social Computing group at QCRI</em></p>
+
+
+</body>
+</html>
